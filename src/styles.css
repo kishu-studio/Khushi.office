@@ -59,6 +59,20 @@ img { display: block; max-width: 100%; }
 .lightbox { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; gap: 16px; padding: var(--gut); background: rgba(20, 16, 13, 0.92); color: var(--paper); }
 .lightbox img { max-height: 80vh; width: auto; }
 
+/* hire panel */
+.hire { position: relative; display: inline-block; }
+.hire-panel { position: fixed; z-index: 30; display: grid; gap: 2px; min-width: 260px; max-width: calc(100vw - 24px); padding: 14px; background: #f6f1e9; color: var(--ink); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); text-align: left; mix-blend-mode: normal; }
+.hire-panel strong { font: 500 20px/1.2 var(--serif); margin-bottom: 6px; }
+.hire-panel a { display: block; padding: 10px 8px; color: var(--ink); text-decoration: none; font-size: 14px; letter-spacing: 0.04em; border-top: 1px solid rgba(36, 29, 24, 0.12); }
+.hire-panel a:hover { background: rgba(197, 138, 62, 0.14); }
+.hire-panel em { display: block; font-style: normal; color: var(--ink-2); font-size: 13px; letter-spacing: 0; }
+.end-actions { display: flex; gap: 12px; justify-content: flex-end; flex-wrap: wrap; }
+.btn-warm { background: var(--warm); border-color: var(--warm); }
+.gallery-actions { display: flex; gap: 28px; align-items: center; }
+.gallery .contact { margin-top: 110px; padding-top: 40px; border-top: 1px solid rgba(36, 29, 24, 0.15); }
+.gallery .contact p { display: flex; gap: 28px; flex-wrap: wrap; }
+.gallery .contact a { color: var(--ink); }
+
 /* transitions and loading */
 .fade { position: fixed; inset: 0; z-index: 10; background: #efe6da; opacity: 0; pointer-events: none; }
 .loader { position: fixed; inset: 0; z-index: 15; display: grid; place-content: center; gap: 18px; background: #1c1714; color: var(--paper); text-align: center; transition: opacity 0.6s; }
@@ -90,4 +104,5 @@ img { display: block; max-width: 100%; }
   .caption h2 { font-size: 24px; }
   .caption p { font-size: 14px; }
   .end { left: var(--gut); right: var(--gut); text-align: left; }
+  .end-actions { justify-content: flex-start; }
 }

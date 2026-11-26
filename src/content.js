@@ -2,8 +2,13 @@
 
 export const DESIGNER = {
   name: 'Khushi',
+  fullName: 'Khushi Panchal',
   role: 'Interior & Architectural Designer',
   base: 'Ahmedabad, India',
+  phone: '+91 90547 10355',
+  email: 'panchalkhushi9195@gmail.com',
+  whatsapp: 'https://wa.me/919054710355?text=' + encodeURIComponent('Hi Khushi, I saw your portfolio and would like to talk about a project.'),
+  mailto: 'mailto:panchalkhushi9195@gmail.com?subject=' + encodeURIComponent('Project enquiry from your portfolio'),
 }
 
 export const PROJECTS = [

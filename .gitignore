@@ -6,3 +6,5 @@ assets-src/
 source-renders/
 bake/in/
 bake/out/
+# presentation: reviewed locally first
+deck/

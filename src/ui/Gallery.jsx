@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import Hire from './Hire.jsx'
 import { DESIGNER, VILLA_STOPS, GALLERIES } from '../content.js'
 
 // The light path: her renders as an editorial page. Used for low-end GPUs,
@@ -17,9 +18,12 @@ export default function Gallery({ onFull }) {
         <p className="eyebrow">{DESIGNER.base}</p>
         <h1>{DESIGNER.name}</h1>
         <p className="role">{DESIGNER.role}</p>
-        <button className="link" onClick={onFull}>
-          Open the 3D walk-through →
-        </button>
+        <div className="gallery-actions">
+          <button className="link" onClick={onFull}>
+            Open the 3D walk-through →
+          </button>
+          <Hire />
+        </div>
       </header>
       <section id="arch-house">
         <h2>The Arch House</h2>
@@ -49,6 +53,13 @@ export default function Gallery({ onFull }) {
           </div>
         </section>
       ))}
+      <footer className="contact">
+        <h2>{DESIGNER.fullName}</h2>
+        <p>
+          <a href={DESIGNER.whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp {DESIGNER.phone}</a>
+          <a href={DESIGNER.mailto}>{DESIGNER.email}</a>
+        </p>
+      </footer>
     </main>
   )
 }

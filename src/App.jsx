@@ -11,6 +11,7 @@ import { DESIGNER, VILLA_STOPS } from './content.js'
 import Gallery from './ui/Gallery.jsx'
 import DrawCallProbe from './ui/DrawCallProbe.jsx'
 import BakeExport from './ui/BakeExport.jsx'
+import Hire from './ui/Hire.jsx'
 import ApplyBake from './lib/ApplyBake.jsx'
 
 const HEIGHTS = { studio: 520, villa: 1300 } // scroll length in vh per mode
@@ -175,6 +176,7 @@ export default function App() {
           <a className="link" href="?gallery">
             <span className="long">View as </span>gallery
           </a>
+          <Hire />
         </nav>
       </header>
 
@@ -231,9 +233,12 @@ function VillaUI({ stage, onBack }) {
       </ol>
       <section className={`end ${end ? 'on' : ''}`}>
         <h2>That was The Arch House.</h2>
-        <button className="btn" onClick={onBack} tabIndex={end ? 0 : -1}>
-          ← Back to the studio
-        </button>
+        <div className="end-actions">
+          <Hire className="btn btn-warm" label="Hire Khushi" up />
+          <button className="btn" onClick={onBack} tabIndex={end ? 0 : -1}>
+            ← Back to the studio
+          </button>
+        </div>
       </section>
       {zoom && (
         <div className="lightbox" onClick={() => setZoom(null)} role="dialog" aria-label="Original render">
