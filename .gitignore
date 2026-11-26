@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.DS_Store
+# originals and working files stay on the Mac
+assets-src/
+source-renders/
+bake/in/
+bake/out/
